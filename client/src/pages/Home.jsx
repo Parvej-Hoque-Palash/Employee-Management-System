@@ -11,7 +11,7 @@ const Home = () => {
   const [sortedColumn, setSortedColumn] = useState(null);
   const [sortDirection, setSortDirection] = useState('asc');
   const [pageNumber, setPageNumber] = useState(0);
-  const usersPerPage = 5; // Number of users to display per page
+  const usersPerPage = 6; // Number of users to display per page
 
 
   useEffect(() => {
