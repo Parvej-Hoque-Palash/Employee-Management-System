@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useLoaderData } from 'react-router-dom'
-import ApexChart from './ApexChart';
+import ApexChart from '../components/ApexChart';
 
 const Dashboard = () => {
     const data=useLoaderData();

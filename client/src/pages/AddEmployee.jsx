@@ -8,7 +8,7 @@ const AddEmployee = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const form = event.target
-    axios.post('http://localhost:5000/api/employee/addEmployee', {
+    axios.post('https://server-phi-blush.vercel.app/api/employee/addEmployee', {
       id: form.id.value,
       firstName: form.firstName.value,
       lastName: form.lastName.value,

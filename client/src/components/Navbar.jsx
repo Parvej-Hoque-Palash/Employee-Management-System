@@ -22,6 +22,7 @@ const Navbar = () => {
         </div>
         <div className='flex justify-center items-center gap-x-4'>
         <Link to={"/"}> Home</Link>
+        <Link to={"/employeeList"}> Employee List</Link>
         <Link to={"/addEmployee"}> Add Employee</Link>
         <Link to={"/dashboard"}> Dashboard</Link>
         </div>

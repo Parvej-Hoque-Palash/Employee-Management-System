@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './pages/Home.jsx';
+import EmployeeList from './pages/EmployeeList.jsx';
 import UserInfo from './pages/UserInfo.jsx';
 import AddEmployee from './pages/AddEmployee.jsx';
 import UpdateUser from './pages/UpdateUser.jsx';
@@ -15,6 +15,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import { SecureRoute } from './routes/SecureRoute.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
+import Home from './pages/Home.jsx';
 
 const secureRouteWrapper = (element) => <SecureRoute>{element}</SecureRoute>;
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         element:<Home />,
       },
       {
+        path: "/employeeList",
+        element:<EmployeeList />,
+      },
+      {
         path: '/login',
         element:<Login/>,
       },
@@ -38,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: "/user/:id",
         element:<UserInfo />,
-        loader:({params})=>fetch(`http://localhost:5000/api/employee/${params.id}`)
+        loader:({params})=>fetch(`https://server-phi-blush.vercel.app/api/employee/${params.id}`)
       },
       {
         path: "/addEmployee",
@@ -47,12 +52,12 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element:secureRouteWrapper(<UpdateUser />),
-        loader:({params})=>fetch(`http://localhost:5000/api/employee/${params.id}`)
+        loader:({params})=>fetch(`https://server-phi-blush.vercel.app/api/employee/${params.id}`)
       },
       {
         path: "/dashboard",
         element:secureRouteWrapper(<Dashboard />),
-        loader:()=>fetch("http://localhost:5000/api/employee")
+        loader:()=>fetch("https://server-phi-blush.vercel.app/api/employee")
       }
     ]
   },

@@ -9,7 +9,7 @@ const Login = () => {
         event.preventDefault();
         const form = event.target;
         try {
-           const response = await axios.post('http://localhost:5000/api/admin/login', {
+           const response = await axios.post('https://server-phi-blush.vercel.app/api/admin/login', {
             email: form.email.value,
             password: form.password.value,
           });
@@ -32,7 +32,7 @@ const Login = () => {
     return (
            <div className=" bg-slate-400 h-screen overflow-hidden flex items-center justify-center pb-16">
       <div className="bg-white lg:w-5/12 md:6/12  rounded-xl border-green-900 ">
-    
+   
       <form className="p-6" onSubmit={handleSubmit}>
       <div className="flex items-center text-lg mb-4 md:mb-6"> 
         <input type="text" name="email" className="bg-gray-200 rounded pl-12 py-1 md:py-2 focus:outline-none w-full" placeholder="Email" />

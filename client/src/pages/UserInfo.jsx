@@ -11,7 +11,7 @@ const UserInfo = () => {
       text: "Successfully deleted!",
       icon: "success",
     });
-   axios.delete(`http://localhost:5000/api/employee/${id}`)
+   axios.delete(`https://server-phi-blush.vercel.app/api/employee/${id}`)
    .then(res=>console.log(res.data));
   }
   console.log(data);

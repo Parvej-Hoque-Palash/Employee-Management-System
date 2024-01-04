@@ -9,7 +9,7 @@ const UpdateUser = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const form = event.target
-    axios.put(`http://localhost:5000/api/employee/${form.id.value}`, {
+    axios.put(`https://server-phi-blush.vercel.app/api/employee/${form.id.value}`, {
       id: form.id.value,
       firstName: form.firstName.value,
       lastName: form.lastName.value,

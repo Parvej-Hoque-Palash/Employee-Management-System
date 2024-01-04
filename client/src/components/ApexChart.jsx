@@ -7,7 +7,7 @@ const ApexChart = () => {
 
   useEffect(() => {
     // Fetch all employees initially
-    axios.get('http://localhost:5000/api/employee/').then((res) => setUsers(res.data));
+    axios.get('https://server-phi-blush.vercel.app/api/employee/').then((res) => setUsers(res.data));
   }, []);
 
   const chartData = {
