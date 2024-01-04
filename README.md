@@ -39,9 +39,13 @@ employees with that position.
 8. Implement Authentication for the application
 
 ● Implement pagination for the data table if there are a large number of employees.
+
 ● Add sorting functionality to the table columns.
+
 ● Use a charting library to visualize the distribution of employees based on their positions
 in the dashboard.
+
 ● Dockerize the Services
+
 ● Add Unit tests
 
